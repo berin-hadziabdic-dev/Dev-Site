@@ -58,7 +58,7 @@ server.post("/xl1p1-z?", (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
+server.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/build/index.html"));
 });
 server.listen(port, console.log("Listening"));
