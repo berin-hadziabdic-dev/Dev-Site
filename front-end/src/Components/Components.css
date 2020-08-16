@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  margin: 0vh;
+  padding: 0vh;
+}
+
+.nav-custom {
+  height: 10vh;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cover:hover {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+.vertical-font {
+  word-break: break-word;
+  font-size: 2.5em;
+  font-weight: bolder;
+  width: 1px;
+}
+
+.section-card-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e4e3fc;
+}
+
+.section-card-blurb {
+  color: #36322a;
+  text-shadow: 1px;
+  font-size: 1.8em;
+  padding-left: 25px;
+  font-style: oblique;
+}
+.section-card-blurb-two {
+  padding-right: 20px;
+  font-size: 1.3em;
+  color: #453922;
+}
+.banner-container {
+  margin: 0px;
+  height: 100vh;
+
+  padding: 0px;
+  margin-top: 10vh;
+  width: 100%;
+  overflow-y: hide;
+}
+
+.img-card {
+  border: 1 px solid black;
+}
+
+.section-header {
+  height: 110px;
+}
+
+.red {
+  background-color: "red";
+  color: black;
+}
+
+.about-container {
+  background-color: #a3000c;
+  color: white;
+  min-height: 150px;
+  height: auto;
+}
+
+.about-container-header {
+  font-size: 3.5em;
+}
+
+.about-container-body {
+  font-size: 2em;
+}
+
+.portfolio-container {
+  background-color: black;
+  color: white;
+}
+
+.section-container {
+  height: 200px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.cover-row {
+  min-height: 280px;
+  height: auto;
+  z-index: 9;
+  color: white;
+}
+
+.nav-link {
+  background-color: white;
+  border-bottom: 1px-solid gray;
+}

@@ -1,0 +1,344 @@
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+function buildLineJSON(
+  starting_x,
+  starting_y,
+  starting_w,
+  x_max,
+  w_max,
+  dx,
+  dw,
+  fillHex
+) {
+  return {
+    x_max: x_max,
+    dx: dx,
+    dw: dw,
+    starting_x: starting_x,
+    starting_y: starting_y,
+    starting_w: starting_w,
+    w_max: w_max,
+    fillHex: fillHex,
+    cur_x: starting_x,
+    cur_w: starting_w,
+  };
+}
+
+function paintLine({ starting_y, cur_x, cur_w, fillHex }, context) {
+  context.beginPath();
+  context.moveTo(cur_x, starting_y);
+  context.lineTo(cur_x + cur_w, starting_y);
+  context.strokeStyle = fillHex;
+  context.lineWidth = "2";
+  context.stroke();
+}
+
+function buildLineSet() {}
+
+function setLine({
+  starting_x,
+  x_max,
+  w_max,
+  width_max,
+  cur_x,
+  cur_w,
+  dx,
+  dw,
+}) {}
+
+let redLine = buildLineJSON(15, 25, 50, 1000, 200, 3, 3, "#ff0000");
+let blackLine = buildLineJSON(200, 50, 100, 1000, 200, 3, 3, "black");
+let blueLine = buildLineJSON(120, 40, 50, 120, 130, 2, 3, "#071833");
+let redLine_2 = buildLineJSON(15, 65, 50, 400, 700, 3, 3, "#ff0000");
+
+function Canvas(props) {
+  let canvasRef = useRef(null);
+  let [context, setContext] = useState(null);
+
+  function drawLine(line) {
+    context.clearRect(0, 0, 1000, 1000);
+    debugger;
+    paintLine(redLine, context);
+    paintLine(blackLine, context);
+    paintLine(blueLine, context);
+    paintLine(redLine_2, context);
+  }
+
+  useEffect(() => {
+    if (canvasRef !== null) {
+      setContext(canvasRef.current.getContext("2d"));
+    }
+  }, [canvasRef]);
+
+  useEffect(() => {
+    if (context !== null) {
+      drawLine();
+    }
+  }, [context]);
+  return <canvas ref={canvasRef}></canvas>;
+}
+
+function SectionHeader(props) {
+  let { title, bgColor } = props;
+  let firstLetter = title.charAt(0);
+  let remainingLetters = title.substring(1, 100);
+
+  return (
+    <div
+      className="row"
+      style={{
+        backgroundColor: "white",
+        fontStyle: "oblique",
+        borderTop: "1px solid",
+      }}
+    >
+      <div className="col-3 offset-1">
+        <span className="display-3 text-danger"> {firstLetter}</span>
+        <span className="text-black display-4">{remainingLetters}</span>
+      </div>
+    </div>
+  );
+}
+function SectionCard(props) {
+  let { imgSrc, text, cover_bg } = props;
+  return (
+    <div
+      className="row cover-row section-container py-5"
+      style={{ backgroundColor: cover_bg }}
+    >
+      <div className="my-4 col-12 col-md-4 border-right">
+        {" "}
+        <img
+          className="border border-primary shadow-lg"
+          src={imgSrc}
+        ></img>{" "}
+      </div>
+      <p className=" col-12 col-md-8   h-100 section-card-text">
+        <h1>
+          {" "}
+          <span className="pr-5 text-dark">{text[0]}</span> <br></br>
+          {text[1]}
+        </h1>
+        <p className="pr-1 section-card-blurb blockquote ">{text[2]}</p>
+        <p className="section-card-blurb-two blockquote">{text[3]}</p>
+      </p>
+    </div>
+  );
+}
+
+function MultiSectionCard(props) {
+  let {
+    react_icon,
+    node_icon,
+    mongo_icon,
+    bootstrap_icon,
+    sectionObject,
+  } = props;
+  return (
+    <React.Fragment className="container-fluid">
+      <div
+        className="row cover-row container-fluid section-container align-items-center justify-content-center border-bottom"
+        style={{ backgroundColor: "#c41700" }}
+      >
+        <div className="col-6 col-md-2  py-2  ">
+          <img className="col-12" src={node_icon}></img>
+          <p className="text-dark col-8">
+            <h2 className="text-secondary">Node</h2>{" "}
+            <span className={{ fontStyle: "oblique" }}>
+              I enjoy using node for backend development. It's simple and fast.
+            </span>
+          </p>
+        </div>
+        <div className="col-6 col-md-2 offset-md-1 h-100 py-2 ">
+          {" "}
+          <img className="col-12" src={react_icon}></img>
+          <h2 className="text-secondary col-12">
+            {sectionObject["react"].h2}
+          </h2>{" "}
+          <span className={"text-warning col-12"} style={{ fontStyle: "bold" }}>
+            {sectionObject["react"].span}
+          </span>
+        </div>
+        <div className="col-6 col-md-2 offset-md-1 py-2  h-100 row">
+          <h2 className="text-secondary col-12 text-dark">
+            {sectionObject["mongo"].h2}
+          </h2>{" "}
+          <span className={"text-white"} style={{ fontStyle: "oblique" }}>
+            {sectionObject["mongo"].span}
+          </span>
+          <img className="col-12" src={mongo_icon}></img>
+        </div>
+        <div className="col-6 col-md-2  offset-md-1 h-100 py-2">
+          <h2 className="text-secondary col-12 text-dark">
+            {sectionObject["bootstrap"].h2}
+          </h2>{" "}
+          <img className="col-12" src={bootstrap_icon}></img>
+          <span className={"text-white"} style={{ fontStyle: "oblique" }}>
+            {sectionObject["bootstrap"].span}
+          </span>
+        </div>
+      </div>
+      <div className="row container-fluid">
+        <div className="col-12 row justify-content-start">
+          <h2 className="display-3 col-12">Honorable-Mentions</h2>
+          <div className="col-12 col-md-4 offset-md-2">
+            {" "}
+            <h2>Go</h2>: Go is a charming little language.<br></br> I used it to
+            write a small back end. <br></br>I hope to use it in the future.{" "}
+            <br></br> I like everything about it.<br></br> The documentation
+            (amazing), the performance, the static type checking, <br></br> and
+            its' simplicity. The delve debugger is also my favorite debugger.{" "}
+            <br></br> I found it extremely effective to use. There's nothing to
+            dislike.
+          </div>
+          <div className="col-12 col-md-4">
+            <h2 className="text-success">Vue </h2>
+            <p>
+              {" "}
+              I've used React much more than Vue,<br></br> but I strongly prefer
+              Vue's approach of templates + Javascript <br></br>over React's
+              Javascript + JSX. <br></br> Though there's hacky ways around it,
+              mixing JSX <br></br>
+              and Javascript can sometimes result in clutter. <br></br>
+              Not cool.
+            </p>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+}
+
+function PortfolioSection(props) {
+  let { background, title, features: portfolioProjects } = props;
+  return (
+    <div
+      className="row border-top container-fluid"
+      style={{
+        background: background,
+      }}
+    >
+      {portfolioProjects.map((project) => {
+        return (
+          <React.Fragment>
+            <h2 className="display-4 col-12 text-dark row">
+              {project[0].title}
+            </h2>
+            <div className="col-12 col-lg-6">
+              {project.map((project_section) => {
+                let retval = null;
+                if (project_section.img === undefined) {
+                  retval = (
+                    <React.Fragment>
+                      <h3 className="col-12 text-danger">
+                        {" "}
+                        {project_section.h3}
+                      </h3>
+                      ;
+                      <p
+                        className="col-12 text-dark"
+                        style={{ fontStyle: "oblique" }}
+                      >
+                        {" "}
+                        {project_section.p}
+                      </p>
+                      ;
+                    </React.Fragment>
+                  );
+                }
+                return retval;
+              })}
+            </div>
+            <div className=" col-12 col-lg-6 ">
+              {project[0].img !== undefined ? (
+                <img className="h-90 w-90 my-3" src={project[0].img} />
+              ) : null}
+            </div>
+          </React.Fragment>
+        );
+      })}
+    </div>
+  );
+}
+
+function ContactSection(props) {
+  let { mail_icon } = props;
+  let [email, setEmail] = useState("");
+  let [msg, setMsg] = useState("");
+
+  function post() {
+    debugger;
+    axios
+      .post("//xl1p1-z?", JSON.stringify({ email: email, msg: msg }), {
+        validateStatus: true,
+        timeout: 3000,
+      })
+      .then(
+        (resp) => {
+          if (resp.status === 200) {
+            setEmail("");
+            setMsg("");
+          }
+        },
+        (err) => {}
+      );
+  }
+
+  return (
+    <div className="row py-4 " style={{ backgroundColor: "" }}>
+      <div className=" col-12 col-md-6 border-dark border-right">
+        <div className="col-12 offset-md-2 col-md-8">
+          <div className="form-group">
+            <label for="e-mail">e-mail</label>
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              type="text"
+              id="e-mail"
+              className="form-control"
+            />
+          </div>
+          <div className="col-12"></div>
+          <div className=" form-group">
+            <label for="text-area">Message</label>
+            <textarea
+              className="form-control"
+              style={{ height: "200px" }}
+              value={msg}
+              onChange={(e) => {
+                setMsg(e.target.value);
+              }}
+            ></textarea>
+          </div>
+          <div className="col-12"></div>
+          <div className="col-12 ">
+            <input
+              type="button"
+              className="btn btn-success form-control"
+              value="Send"
+              onClick={() => post()}
+            ></input>
+          </div>
+        </div>
+      </div>
+
+      <div className=" col-12 col-md-6">
+        <img className="" src={mail_icon}></img>
+        <h2 className="text-warning "> Drop a line.</h2>
+        <h3> Any time.</h3>
+        <h1>And, I'll get back to you.</h1>
+        <h2>I always do.</h2>
+      </div>
+    </div>
+  );
+}
+export {
+  Canvas,
+  SectionHeader,
+  SectionCard,
+  MultiSectionCard,
+  PortfolioSection,
+  ContactSection,
+};
