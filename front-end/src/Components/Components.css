@@ -134,6 +134,6 @@
 }
 @include media-breakpoint-up(md) {
   .text-resize {
-    font-size: 0.6 rem;
+    font-size: 0.6 em;
   }
 }
