@@ -12,6 +12,7 @@ import {
 
 import "./App.css";
 
+import me_icon from "./Components/Images/aboutme.jpg";
 import PSU_icon from "./Components/Images/PSU.jpg";
 import PCC_icon from "./Components/Images/PCC.png";
 import mail_icon from "./Components/Images/mail-icon.png";
@@ -69,6 +70,7 @@ const portfolio = [
   ],
 ];
 
+const about_TEXT = ["I'm Berin.", "", "Nice to meet you."];
 const PCC_TEXT = [
   "Portland Community College",
   "Associates Of Applied Science",
@@ -109,8 +111,14 @@ function App() {
     <div className="App container-fluid mx-0 px-0 w-100">
       <SiteBanner bannerImg={banner} />
       <Nav />
-
-      <SectionHeader bgColor={"#ad8f8f"} title={"Education"} />
+      <SectionHeader title={"About"} />
+      <SectionCard
+        className="row"
+        cover_bg="white"
+        imgSrc={me_icon}
+        text={about_TEXT}
+      />
+      <SectionHeader bgColor={"#ad8f8f"} id="education" title={"Education"} />
       <SectionCard cover_bg="#8786cf" imgSrc={PCC_icon} text={PCC_TEXT} />
       <SectionCard
         className="row"
@@ -119,7 +127,7 @@ function App() {
         text={PSU_TEXT}
       />
 
-      <SectionHeader title={"Stack"} />
+      <SectionHeader title={"Stack"} id="stack" />
       <MultiSectionCard
         imgSrc={PCC_icon}
         colors={["#ff0000", "#bdb69f", "#dbdbdb", "#ff0000"]}
@@ -129,9 +137,9 @@ function App() {
         react_icon={react_icon}
         sectionObject={sectionObject}
       />
-      <SectionHeader title={"Portfolio"} />
+      <SectionHeader title={"Portfolio"} id="portfolio" />
       <PortfolioSection features={portfolio} />
-      <SectionHeader title="Contact" />
+      <SectionHeader title="Contact" id="contact" />
       <ContactSectionTemporary mail_icon={mail_icon} />
     </div>
   );

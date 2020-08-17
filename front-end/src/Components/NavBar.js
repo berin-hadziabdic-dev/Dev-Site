@@ -7,16 +7,24 @@ function Nav() {
       <a className="brand"></a>
       <ul className="ml-auto navbar-nav border border-success shadow">
         <li className="nav-item">
-          <a className="nav-link  text-warning">Education</a>
+          <a href="#education" className="nav-link  text-warning">
+            Education
+          </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-danger">Tech</a>
+          <a className="nav-link text-danger" href="#stack">
+            Tech
+          </a>
         </li>
         <li className="nav-item red">
-          <a className="nav-link text-secondary">Portfolio</a>
+          <a className="nav-link text-secondary" href="#portfolio">
+            Portfolio
+          </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link">Contact</a>
+          <a className="nav-link" href="#contact">
+            Contact
+          </a>
         </li>
       </ul>
     </nav>

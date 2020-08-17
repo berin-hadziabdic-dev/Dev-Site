@@ -79,7 +79,7 @@ function Canvas(props) {
 }
 
 function SectionHeader(props) {
-  let { title, bgColor } = props;
+  let { title, id } = props;
   let firstLetter = title.charAt(0);
   let remainingLetters = title.substring(1, 100);
 
@@ -91,6 +91,7 @@ function SectionHeader(props) {
         fontStyle: "oblique",
         borderTop: "1px solid",
       }}
+      id={id}
     >
       <div className="row">
         <div className="col-3 offset-1">
@@ -258,7 +259,7 @@ function PortfolioSection(props) {
               </div>
               <div className=" col-12 col-lg-6 ">
                 {project[0].img !== undefined ? (
-                  <img className="h-90 w-90 my-3" src={project[0].img} />
+                  <img className="my-3" src={project[0].img} />
                 ) : null}
               </div>
             </React.Fragment>
