@@ -199,7 +199,7 @@ function MultiSectionCard(props) {
       </div>
       <div className="row container-fluid py-4">
         <div className="col-12 row justify-content-start">
-          <h2 className="display-3 col-12">Honorable Mentions</h2>
+          <h2 className="col-12">Honorable Mentions</h2>
           <div className="col-12 col-md-4 offset-md-2">
             {" "}
             <h2>Go</h2> Go is a charming little language.<br></br> I used it to
@@ -233,7 +233,7 @@ function PortfolioSection(props) {
   return (
     <div className="container-fluid">
       <div
-        className="row border-top"
+        className="row border-top pl-6"
         style={{
           background: background,
         }}
