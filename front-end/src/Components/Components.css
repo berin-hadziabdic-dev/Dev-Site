@@ -132,8 +132,17 @@
 .text-resize {
   font-size: 1em;
 }
+
+.tiny-text {
+  font-size: 1.2em;
+}
+
 @include media-breakpoint-up(md) {
   .text-resize {
-    font-size: 0.6 em;
+    font-size: 0.9 em;
+  }
+
+  .tiny-text {
+    font-size: 0.5em;
   }
 }
