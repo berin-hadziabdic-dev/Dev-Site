@@ -122,15 +122,17 @@ function App() {
       />
 
       <SectionHeader title={"Stack"} id="stack" />
-      <MultiSectionCard
-        imgSrc={PCC_icon}
-        colors={["#ff0000", "#bdb69f", "#dbdbdb", "#ff0000"]}
-        mongo_icon={mongo_icon}
-        bootstrap_icon={bootstrap_icon}
-        node_icon={node_icon}
-        react_icon={react_icon}
-        sectionObject={sectionObject}
-      />
+      {
+        <MultiSectionCard
+          imgSrc={PCC_icon}
+          colors={["#ff0000", "#bdb69f", "#dbdbdb", "#ff0000"]}
+          mongo_icon={mongo_icon}
+          bootstrap_icon={bootstrap_icon}
+          node_icon={node_icon}
+          react_icon={react_icon}
+          sectionObject={sectionObject}
+        />
+      }
       <SectionHeader title={"Portfolio"} id="portfolio" />
       <PortfolioSection features={portfolio} />
       <SectionHeader title="Contact" id="contact" />
