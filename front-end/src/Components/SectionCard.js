@@ -157,39 +157,33 @@ function MultiSectionCard(props) {
             </span>
           </div>
         </div>
-        {/*
-        <div className="col-12">
-          <div className="col-6 col-md-2 offset-md-1 h-100 py-2 row">
-            {" "}
-            <img alt="" className="col-12 img-fluid" src={react_icon}></img>
-            <h2 className="text-secondary col-12">
-              {sectionObject["react"].h2}
-            </h2>{" "}
-            <span
-              className={"text-warning col-12"}
-              style={{ fontStyle: "bold" }}
-            >
-              {sectionObject["react"].span}
-            </span>
-          </div>
-          <div className="col-6 col-md-2 offset-md-1 py-2  h-100 row">
-            <h2 className="text-secondary col-12 text-dark">
-              {sectionObject["mongo"].h2}
-            </h2>{" "}
-            <span className={"text-white"} style={{ fontStyle: "oblique" }}>
-              {sectionObject["mongo"].span}
-            </span>
-            <img alt="" className="col-12 img-fluid" src={mongo_icon}></img>
-          </div>
-          <div className="col-6 col-md-2  offset-md-1 h-100 py-2">
-            <h2 className="text-secondary col-12 text-dark">
-              {sectionObject["bootstrap"].h2}
-            </h2>{" "}
-            <img alt="" className="col-12 img-fluid" src={bootstrap_icon}></img>
-            <span className={"text-white"} style={{ fontStyle: "oblique" }}>
-              {sectionObject["bootstrap"].span}
-            </span>
-          </div>
+        <div className="col-6 col-md-2 offset-md-1 h-100 py-2 row">
+          {" "}
+          <img alt="" className="col-12 img-fluid" src={react_icon}></img>
+          <h2 className="text-secondary col-12">
+            {sectionObject["react"].h2}
+          </h2>{" "}
+          <span className={"text-warning col-12"} style={{ fontStyle: "bold" }}>
+            {sectionObject["react"].span}
+          </span>
+        </div>
+        <div className="col-6 col-md-2 offset-md-1 py-2  h-100 row">
+          <h2 className="text-secondary col-12 text-dark">
+            {sectionObject["mongo"].h2}
+          </h2>{" "}
+          <span className={"text-white"} style={{ fontStyle: "oblique" }}>
+            {sectionObject["mongo"].span}
+          </span>
+          <img alt="" className="col-12 img-fluid" src={mongo_icon}></img>
+        </div>
+        <div className="col-6 col-md-2  offset-md-1 h-100 py-2">
+          <h2 className="text-secondary col-12 text-dark">
+            {sectionObject["bootstrap"].h2}
+          </h2>{" "}
+          <img alt="" className="col-12 img-fluid" src={bootstrap_icon}></img>
+          <span className={"text-white"} style={{ fontStyle: "oblique" }}>
+            {sectionObject["bootstrap"].span}
+          </span>
         </div>
       </div>
       <div className="row container-fluid py-4">
@@ -218,7 +212,6 @@ function MultiSectionCard(props) {
             </p>
           </div>
         </div>
-        */}
       </div>
     </div>
   );

@@ -104,39 +104,41 @@ const sectionObject = {
 function App() {
   return (
     <div className="App container-fluid mx-0 px-0 w-100">
-      <SiteBanner bannerImg={banner} />
-      <Nav />
-      <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
-      <SectionCard
-        className="row"
-        cover_bg="white"
-        imgSrc={me_icon}
-        text={about_TEXT}
-      />
-      <SectionCard cover_bg="white" imgSrc={PCC_icon} text={PCC_TEXT} />
-      <SectionCard
-        className="row"
-        cover_bg="white"
-        imgSrc={PSU_icon}
-        text={PSU_TEXT}
-      />
-
-      <SectionHeader title={"Stack"} id="stack" />
-      {
-        <MultiSectionCard
-          imgSrc={PCC_icon}
-          colors={["#ff0000", "#bdb69f", "#dbdbdb", "#ff0000"]}
-          mongo_icon={mongo_icon}
-          bootstrap_icon={bootstrap_icon}
-          node_icon={node_icon}
-          react_icon={react_icon}
-          sectionObject={sectionObject}
+      <div className="row">
+        <SiteBanner bannerImg={banner} />
+        <Nav />
+        <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
+        <SectionCard
+          className="row"
+          cover_bg="white"
+          imgSrc={me_icon}
+          text={about_TEXT}
         />
-      }
-      <SectionHeader title={"Portfolio"} id="portfolio" />
-      <PortfolioSection features={portfolio} />
-      <SectionHeader title="Contact" id="contact" />
-      <ContactSectionTemporary mail_icon={mail_icon} />
+        <SectionCard cover_bg="white" imgSrc={PCC_icon} text={PCC_TEXT} />
+        <SectionCard
+          className="row"
+          cover_bg="white"
+          imgSrc={PSU_icon}
+          text={PSU_TEXT}
+        />
+
+        <SectionHeader title={"Stack"} id="stack" />
+        {
+          <MultiSectionCard
+            imgSrc={PCC_icon}
+            colors={["#ff0000", "#bdb69f", "#dbdbdb", "#ff0000"]}
+            mongo_icon={mongo_icon}
+            bootstrap_icon={bootstrap_icon}
+            node_icon={node_icon}
+            react_icon={react_icon}
+            sectionObject={sectionObject}
+          />
+        }
+        <SectionHeader title={"Portfolio"} id="portfolio" />
+        <PortfolioSection features={portfolio} />
+        <SectionHeader title="Contact" id="contact" />
+        <ContactSectionTemporary mail_icon={mail_icon} />
+      </div>
     </div>
   );
 }
