@@ -8,10 +8,9 @@ function SiteBanner(props) {
         <div className="col-12 fade-in">
           <img className="img-fluid" src={bannerText}></img>
         </div>
-        <div className=" col-8 col-md-12"></div>
-        <div className="col-12">
-          <img alt="" className="img-fluid" style={{}} src={bannerImg} />
-        </div>
+        <div className="col-12 fade-in"></div>
+
+        <img alt="" className="img-fluid" style={{}} src={bannerImg} />
       </div>
     </div>
   );
