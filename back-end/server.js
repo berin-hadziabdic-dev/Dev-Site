@@ -6,7 +6,7 @@ const uri =
   "mongodb+srv://BerinHadziabdic:aFlK0cKoPRP2RYgG@cluster0-dzpnn.mongodb.net/<devsite>?retryWrites=true&w=majority";
 let path = require("path");
 
-const port = process.env.port || 8081;
+const port = process.env.port || 8080;
 
 server.use(express.json());
 

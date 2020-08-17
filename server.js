@@ -6,7 +6,7 @@ const uri =
   "mongodb+srv://BerinHadziabdic:aFlK0cKoPRP2RYgG@cluster0-dzpnn.mongodb.net/<devsite>?retryWrites=true&w=majority";
 let path = require("path");
 
-const port = process.env.port || 8081;
+const port = process.env.port || 8080;
 
 server.use(express.json());
 
@@ -58,7 +58,9 @@ server.post("/xl1p1-z?", (req, res) => {
   }
 });
 
+server.use(express.static(path.join(__dirname, "build")));
+
 server.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/build/index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 server.listen(port, console.log("Listening"));
