@@ -4,11 +4,10 @@ import "./Components.css";
 function Nav() {
   return (
     <nav className="navbar  navbar-expand fade-in nav-custom fixed-top">
-      <a className="brand"></a>
       <ul className="ml-auto navbar-nav border border-success shadow">
         <li className="nav-item">
-          <a href="#education" className="nav-link  text-warning">
-            Education
+          <a href="#about" className="nav-link  text-warning">
+            About
           </a>
         </li>
         <li className="nav-item">

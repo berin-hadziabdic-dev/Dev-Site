@@ -114,7 +114,7 @@ function SectionCard(props) {
         <div className="my-4 col-12 col-md-4 border-right">
           {" "}
           <img
-            className="border border-primary shadow-lg"
+            className="border border-secondary shadow"
             src={imgSrc}
           ></img>{" "}
         </div>
@@ -122,7 +122,7 @@ function SectionCard(props) {
           <h1>
             {" "}
             <span className="pr-5 text-dark">{text[0]}</span> <br></br>
-            {text[1]}
+            <span className="text-warning">{text[1]}</span>
           </h1>
           <p className="pr-1 section-card-blurb blockquote ">{text[2]}</p>
           <p className="section-card-blurb-two blockquote">{text[3]}</p>
@@ -151,7 +151,8 @@ function MultiSectionCard(props) {
           <p className="text-dark col-8">
             <h2 className="text-secondary">Node</h2>{" "}
             <span className={{ fontStyle: "oblique" }}>
-              I enjoy using node for backend development. It's simple and fast.
+              I enjoy using node for backend development. It's simple, very easy
+              to develop in, and performant enough for most oridinary use cases.
             </span>
           </p>
         </div>
@@ -185,18 +186,19 @@ function MultiSectionCard(props) {
           </span>
         </div>
       </div>
-      <div className="row container-fluid">
+      <div className="row container-fluid py-4">
         <div className="col-12 row justify-content-start">
-          <h2 className="display-3 col-12">Honorable-Mentions</h2>
+          <h2 className="display-3 col-12">Honorable Mentions</h2>
           <div className="col-12 col-md-4 offset-md-2">
             {" "}
-            <h2>Go</h2>: Go is a charming little language.<br></br> I used it to
-            write a small back end. <br></br>I hope to use it in the future.{" "}
-            <br></br> I like everything about it.<br></br> The documentation
-            (amazing), the performance, the static type checking, <br></br> and
-            its' simplicity. The delve debugger is also my favorite debugger.{" "}
-            <br></br> I found it extremely effective to use. There's nothing to
-            dislike.
+            <h2>Go</h2> Go is a charming little language.<br></br> I used it to
+            write a small back end. <br></br>I also hope to use it in the
+            future, and by the looks of its' growing usage statistics, that's a
+            possibility. <br></br> I like everything about it.<br></br> The
+            documentation (amazing), the performance, the static type checking,{" "}
+            <br></br> and its' simplicity. The delve debugger is also an
+            amazingly effective tool. <br></br>There's nothing to dislike about
+            it.
           </div>
           <div className="col-12 col-md-4">
             <h2 className="text-success">Vue </h2>
@@ -207,7 +209,6 @@ function MultiSectionCard(props) {
               Javascript + JSX. <br></br> Though there's hacky ways around it,
               mixing JSX <br></br>
               and Javascript can sometimes result in clutter. <br></br>
-              Not cool.
             </p>
           </div>
         </div>

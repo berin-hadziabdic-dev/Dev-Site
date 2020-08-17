@@ -32,7 +32,7 @@ const portfolio = [
     {
       h3: "Project Aim",
       p:
-        "Send heavy, light, or moderate traffic to a set of routes on a backend server; also allows for user, you or me, to generate data that might represents actual application users. Compiles request and response reports at the end of the process, saving them to a back end.",
+        "Send heavy, light, or moderate traffic to a set of routes on a backend server; also allows for user, you or me, to generate data that might represent actual application users. Compiles request and response reports at the end of the process and saves results to a Mongo back end for view at a later time.",
     },
     {
       h3: "Testsets",
@@ -54,8 +54,7 @@ const portfolio = [
 
     {
       h3: "Project Aim",
-      p:
-        "Report compromised Blockchain contracts  on the HaveIBeenExploited website.",
+      p: "Report compromised Blockchain contracts through a web app.",
     },
     {
       h3: "Python Scraper",
@@ -74,25 +73,21 @@ const about_TEXT = ["I'm Berin.", "", "Nice to meet you."];
 const PCC_TEXT = [
   "Portland Community College",
   "Associates Of Applied Science",
-  "P.C.C was a challenging and rewarding experience.",
-  "My days mostly consisted of crunching math and coding.",
+  "P.C.C was a challenging but rewarding experience.",
+  "More or less, it was a two year trudge of math and coding.",
 ];
 const PSU_TEXT = [
   "Portland State University",
   "Bachelor's Of Computer Science",
-  "I'm very satisfied with my tour of the P.S.U experience. ",
-  "The curriculum built a very strong foundation in general C.S theory, networking, and databases.",
+  "P.S.U was a few notches of difficulty above PCC. ",
+  "The curriculum built a very strong foundation in general algorithmic knowledge,networking, databases, programming languages, and operating systems.",
 ];
-const SERVB_TEXT =
-  "The Serverbuster. I name things poorly, except my variables. A node.js + React app that allows you to put,post,delete, and get to a set of routes on your server. Useful for testing. Uses a fork microservice to perform HTTP workload.";
-const HIBE_TEXT =
-  "An application I and another student made to store and report on exploited contracts. It was built with a vanilla React front end, GoLang backend, MySql, and a python scraper which collected contract info.";
 
 const sectionObject = {
   react: {
     h2: "React",
     span:
-      "React is an incredible library. It's simple and you can build apps fast. I also like that the eco system is rich, and there's support for a wide vista of tools.",
+      "React is an incredible library. Hooks simplify everything. The eco system is rich, and it's compatible with many tools like V.S code, Bootstrap, Node, and so on. All very good things.",
   },
   mongo: {
     h2: "Mongo",
@@ -102,7 +97,7 @@ const sectionObject = {
   bootstrap: {
     h2: "bootstrap",
     span:
-      "Bootstraps prestyled HTML elements are amazing, but its' grid system is second to none. It makes developing much faster since I don't need to tinker with CSS, and it comes with prebuilt responsivenes. These are enormous benefits that cut out a lot, so it is an indispensible tool for me at least.",
+      "Bootstraps prestyled HTML elements are amazing, but its' grid system is second to none. It makes developing much faster since I don't need to tinker with CSS, and it comes with prebuilt responsivenes. These are enormous benefits that cut out a lot of boilerplate, so it is an indispensible tool, to me at least.",
   },
 };
 
@@ -111,18 +106,17 @@ function App() {
     <div className="App container-fluid mx-0 px-0 w-100">
       <SiteBanner bannerImg={banner} />
       <Nav />
-      <SectionHeader title={"About"} />
+      <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
       <SectionCard
         className="row"
         cover_bg="white"
         imgSrc={me_icon}
         text={about_TEXT}
       />
-      <SectionHeader bgColor={"#ad8f8f"} id="education" title={"Education"} />
-      <SectionCard cover_bg="#8786cf" imgSrc={PCC_icon} text={PCC_TEXT} />
+      <SectionCard cover_bg="white" imgSrc={PCC_icon} text={PCC_TEXT} />
       <SectionCard
         className="row"
-        cover_bg="#85b8ff"
+        cover_bg="white"
         imgSrc={PSU_icon}
         text={PSU_TEXT}
       />
