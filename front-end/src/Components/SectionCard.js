@@ -115,7 +115,7 @@ function SectionCard(props) {
           {" "}
           <img
             alt=""
-            className="border border-secondary shadow"
+            className="border border-secondary shadow img-fluid"
             src={imgSrc}
           ></img>{" "}
         </div>
@@ -148,7 +148,7 @@ function MultiSectionCard(props) {
         style={{ backgroundColor: "#c41700" }}
       >
         <div className="col-6 col-md-2  py-2  ">
-          <img alt="" className="col-12" src={node_icon}></img>
+          <img alt="" className="col-12 img-fluid" src={node_icon}></img>
           <p className="text-dark col-8">
             <h2 className="text-secondary">Node</h2>{" "}
             <span className={{ fontStyle: "oblique" }}>
@@ -160,7 +160,7 @@ function MultiSectionCard(props) {
 
         <div className="col-6 col-md-2 offset-md-1 h-100 py-2 row">
           {" "}
-          <img alt="" className="col-12" src={react_icon}></img>
+          <img alt="" className="col-12 img-fluid" src={react_icon}></img>
           <h2 className="text-secondary col-12">
             {sectionObject["react"].h2}
           </h2>{" "}
@@ -175,13 +175,13 @@ function MultiSectionCard(props) {
           <span className={"text-white"} style={{ fontStyle: "oblique" }}>
             {sectionObject["mongo"].span}
           </span>
-          <img alt="" className="col-12" src={mongo_icon}></img>
+          <img alt="" className="col-12 img-fluid" src={mongo_icon}></img>
         </div>
         <div className="col-6 col-md-2  offset-md-1 h-100 py-2">
           <h2 className="text-secondary col-12 text-dark">
             {sectionObject["bootstrap"].h2}
           </h2>{" "}
-          <img alt="" className="col-12" src={bootstrap_icon}></img>
+          <img alt="" className="col-12 img-fluid" src={bootstrap_icon}></img>
           <span className={"text-white"} style={{ fontStyle: "oblique" }}>
             {sectionObject["bootstrap"].span}
           </span>
@@ -261,7 +261,7 @@ function PortfolioSection(props) {
               </div>
               <div className=" col-12 col-lg-6 ">
                 {project[0].img !== undefined ? (
-                  <img alt="" className="my-3" src={project[0].img} />
+                  <img alt="" className="my-3 img-fluid" src={project[0].img} />
                 ) : null}
               </div>
             </React.Fragment>
@@ -287,7 +287,7 @@ function ContactSectionTemporary(props) {
           <h2>
             LinkedIn:<a href="">Placeholder link doesnt go anywhere.</a>
           </h2>
-          <img alt="" src={mail_icon} />
+          <img alt="" src={mail_icon} className="img-fluid" />
         </div>
       </div>
     </div>
@@ -358,7 +358,7 @@ function ContactSection(props) {
       </div>
 
       <div className=" col-12 col-md-6">
-        <img alt="" className="" src={mail_icon}></img>
+        <img alt="" className="img-fluid" src={mail_icon}></img>
         <h2 className="text-warning "> Leave me a message.</h2>
         <h1>And, I'll get back to you.</h1>
         <h2>Muchos gracias.</h2>
