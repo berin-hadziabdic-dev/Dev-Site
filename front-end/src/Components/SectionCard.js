@@ -106,7 +106,7 @@ function SectionHeader(props) {
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div className="container-fluid">
+    <div className="container-fluid text-resize">
       <div
         className="row cover-row section-container py-5"
         style={{ backgroundColor: cover_bg }}

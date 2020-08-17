@@ -128,3 +128,12 @@
   background-color: white;
   border-bottom: 1px-solid gray;
 }
+
+.text-resize {
+  font-size: 1em;
+}
+@include media-breakpoint-up(md) {
+  .text-resize {
+    font-size: 0.6 rem;
+  }
+}
