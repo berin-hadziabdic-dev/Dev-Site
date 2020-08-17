@@ -2,23 +2,13 @@ const express = require("express");
 const path = require("path");
 
 let server = express();
-const fs = require("fs");
-const https = require("https");
-let collectionRef = null;
-let { MongoClient } = require("mongodb");
-const uri =
-  "mongodb+srv://BerinHadziabdic:aFlK0cKoPRP2RYgG@cluster0-dzpnn.mongodb.net/<devsite>?retryWrites=true&w=majority";
-
-const keyCert = {
-  key: fs.readFileSync("./server.key"),
-  cert: fs.readFileSync("./server.cert"),
-  passphrase: "1xcD5jkQ",
-};
 
 const port = process.env.port || 8080;
 
 server.use(express.json());
 
+//use commented code when you get Cert
+/*
 function saveBody(body) {
   MongoClient.connect(uri, function (err, dbObj) {
     if (err === null)
@@ -66,7 +56,7 @@ server.post("/xl1p1-z?", (req, res) => {
     res.status(400).end();
   }
 });
-
+*/
 server.use(express.static(path.join(__dirname, "build")));
 
 server.get("*", (req, res) => {
