@@ -69,7 +69,7 @@ const portfolio = [
   ],
 ];
 
-const about_TEXT = ["Nice to meet you.", "", ""];
+const about_TEXT = ["", "Nice to meet you.", ""];
 const PCC_TEXT = [
   "Portland Community College",
   "Associates Of Applied Science",

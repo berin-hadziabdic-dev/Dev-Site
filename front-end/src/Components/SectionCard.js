@@ -125,8 +125,8 @@ function SectionCard(props) {
             <span className="pr-5 text-dark">{text[0]}</span> <br></br>
             <span className="text-warning">{text[1]}</span>
           </h3>
-          <p className="pr-1 section-card-blurb blockquote ">{text[2]}</p>
-          <p className="section-card-blurb-two blockquote">{text[3]}</p>
+          <p className="pr-1 section-card-blurb">{text[2]}</p>
+          <p className="section-card-blurb-two">{text[3]}</p>
         </div>
       </div>
     </div>
