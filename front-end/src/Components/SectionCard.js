@@ -147,7 +147,7 @@ function MultiSectionCard(props) {
         className="row cover-row  section-container align-items-center justify-content-center border-bottom"
         style={{ backgroundColor: "#c41700" }}
       >
-        <div className="col-6 col-lg-3  py-2  ">
+        <div className="col-12 col-md-6 col-lg-3  py-2  ">
           <img alt="" className="img-fluid text-center" src={node_icon}></img>
           <div className="text-dark col-12">
             <h2 className="text-secondary">Node</h2>{" "}
@@ -157,7 +157,7 @@ function MultiSectionCard(props) {
             </span>
           </div>
         </div>
-        <div className="col-6 col-lg-3  h-100 py-2">
+        <div className="col-12 col-md-6 col-lg-3  h-100 py-2">
           {" "}
           <img alt="" className="img-fluid my-auto" src={react_icon}></img>
           <h2 className="text-secondary col-12">
@@ -170,7 +170,7 @@ function MultiSectionCard(props) {
             {sectionObject["react"].span}
           </span>
         </div>
-        <div className="col-6 col-lg-3  py-2  h-100 row">
+        <div className="col-12 col-md-6 col-lg-3  py-2  h-100 row">
           <h2 className="text-secondary col-12 text-dark">
             {sectionObject["mongo"].h2}
           </h2>{" "}
@@ -182,7 +182,7 @@ function MultiSectionCard(props) {
           </span>
           <img alt="" className="img-fluid text-center" src={mongo_icon}></img>
         </div>
-        <div className="col-6 col-lg-3   h-100 py-2">
+        <div className="col-12 col-md-6 col-lg-3   h-100 py-2">
           <h2 className="text-secondary col-12 text-dark">
             {sectionObject["bootstrap"].h2}
           </h2>{" "}
