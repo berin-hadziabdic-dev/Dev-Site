@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:8080",
   "name": "back-end",
   "version": "1.0.0",
   "description": "Deps for back end.",

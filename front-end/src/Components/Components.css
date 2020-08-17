@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
 }
-html {
-  margin: 0vh;
-  padding: 0vh;
-}
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
 .nav-custom {
   height: 10vh;
 }
@@ -69,11 +69,10 @@ html {
 }
 .banner-container {
   margin: 0px;
-  height: 100vh;
 
   padding: 0px;
   margin-top: 10vh;
-  width: 100%;
+
   overflow-y: hide;
 }
 

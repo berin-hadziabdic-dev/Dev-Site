@@ -85,43 +85,48 @@ function SectionHeader(props) {
 
   return (
     <div
-      className="row"
+      className="container-fluid"
       style={{
         backgroundColor: "white",
         fontStyle: "oblique",
         borderTop: "1px solid",
       }}
     >
-      <div className="col-3 offset-1">
-        <span className="display-3 text-danger"> {firstLetter}</span>
-        <span className="text-black display-4">{remainingLetters}</span>
+      <div className="row">
+        <div className="col-3 offset-1">
+          <span className="display-3 text-danger"> {firstLetter}</span>
+          <span className="text-black display-4">{remainingLetters}</span>
+        </div>
       </div>
     </div>
   );
 }
+
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div
-      className="row cover-row section-container py-5"
-      style={{ backgroundColor: cover_bg }}
-    >
-      <div className="my-4 col-12 col-md-4 border-right">
-        {" "}
-        <img
-          className="border border-primary shadow-lg"
-          src={imgSrc}
-        ></img>{" "}
-      </div>
-      <p className=" col-12 col-md-8   h-100 section-card-text">
-        <h1>
+    <div className="container-fluid">
+      <div
+        className="row cover-row section-container py-5"
+        style={{ backgroundColor: cover_bg }}
+      >
+        <div className="my-4 col-12 col-md-4 border-right">
           {" "}
-          <span className="pr-5 text-dark">{text[0]}</span> <br></br>
-          {text[1]}
-        </h1>
-        <p className="pr-1 section-card-blurb blockquote ">{text[2]}</p>
-        <p className="section-card-blurb-two blockquote">{text[3]}</p>
-      </p>
+          <img
+            className="border border-primary shadow-lg"
+            src={imgSrc}
+          ></img>{" "}
+        </div>
+        <div className=" col-12 col-md-8   h-100 section-card-text">
+          <h1>
+            {" "}
+            <span className="pr-5 text-dark">{text[0]}</span> <br></br>
+            {text[1]}
+          </h1>
+          <p className="pr-1 section-card-blurb blockquote ">{text[2]}</p>
+          <p className="section-card-blurb-two blockquote">{text[3]}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -135,9 +140,9 @@ function MultiSectionCard(props) {
     sectionObject,
   } = props;
   return (
-    <React.Fragment className="container-fluid">
+    <div className="container-fluid">
       <div
-        className="row cover-row container-fluid section-container align-items-center justify-content-center border-bottom"
+        className="row cover-row  section-container align-items-center justify-content-center border-bottom"
         style={{ backgroundColor: "#c41700" }}
       >
         <div className="col-6 col-md-2  py-2  ">
@@ -149,6 +154,7 @@ function MultiSectionCard(props) {
             </span>
           </p>
         </div>
+
         <div className="col-6 col-md-2 offset-md-1 h-100 py-2 ">
           {" "}
           <img className="col-12" src={react_icon}></img>
@@ -205,58 +211,82 @@ function MultiSectionCard(props) {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 
 function PortfolioSection(props) {
   let { background, title, features: portfolioProjects } = props;
   return (
-    <div
-      className="row border-top container-fluid"
-      style={{
-        background: background,
-      }}
-    >
-      {portfolioProjects.map((project) => {
-        return (
-          <React.Fragment>
-            <h2 className="display-4 col-12 text-dark row">
-              {project[0].title}
-            </h2>
-            <div className="col-12 col-lg-6">
-              {project.map((project_section) => {
-                let retval = null;
-                if (project_section.img === undefined) {
-                  retval = (
-                    <React.Fragment>
-                      <h3 className="col-12 text-danger">
-                        {" "}
-                        {project_section.h3}
-                      </h3>
-                      ;
-                      <p
-                        className="col-12 text-dark"
-                        style={{ fontStyle: "oblique" }}
-                      >
-                        {" "}
-                        {project_section.p}
-                      </p>
-                      ;
-                    </React.Fragment>
-                  );
-                }
-                return retval;
-              })}
-            </div>
-            <div className=" col-12 col-lg-6 ">
-              {project[0].img !== undefined ? (
-                <img className="h-90 w-90 my-3" src={project[0].img} />
-              ) : null}
-            </div>
-          </React.Fragment>
-        );
-      })}
+    <div className="container-fluid">
+      <div
+        className="row border-top"
+        style={{
+          background: background,
+        }}
+      >
+        {portfolioProjects.map((project) => {
+          return (
+            <React.Fragment>
+              <h2 className="display-4 col-12 text-dark row">
+                {project[0].title}
+              </h2>
+              <div className="col-12 col-lg-6">
+                {project.map((project_section) => {
+                  let retval = null;
+                  if (project_section.img === undefined) {
+                    retval = (
+                      <React.Fragment>
+                        <h3 className="col-12 text-danger">
+                          {" "}
+                          {project_section.h3}
+                        </h3>
+                        ;
+                        <p
+                          className="col-12 text-dark"
+                          style={{ fontStyle: "oblique" }}
+                        >
+                          {" "}
+                          {project_section.p}
+                        </p>
+                        ;
+                      </React.Fragment>
+                    );
+                  }
+                  return retval;
+                })}
+              </div>
+              <div className=" col-12 col-lg-6 ">
+                {project[0].img !== undefined ? (
+                  <img className="h-90 w-90 my-3" src={project[0].img} />
+                ) : null}
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function ContactSectionTemporary(props) {
+  let { mail_icon } = props;
+  return (
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-12">
+          <h2>
+            {" "}
+            <span className="text-warning">
+              E-mail
+            </span> hadziabdicberin@gmail{" "}
+          </h2>
+          <h2>
+            LinkedIn:<a href="">Placeholder link doesnt go anywhere.</a>
+          </h2>
+          <img src={mail_icon} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -326,10 +356,9 @@ function ContactSection(props) {
 
       <div className=" col-12 col-md-6">
         <img className="" src={mail_icon}></img>
-        <h2 className="text-warning "> Drop a line.</h2>
-        <h3> Any time.</h3>
+        <h2 className="text-warning "> Leave me a message.</h2>
         <h1>And, I'll get back to you.</h1>
-        <h2>I always do.</h2>
+        <h2>Muchos gracias.</h2>
       </div>
     </div>
   );
@@ -341,4 +370,5 @@ export {
   MultiSectionCard,
   PortfolioSection,
   ContactSection,
+  ContactSectionTemporary,
 };

@@ -7,12 +7,11 @@ import {
   SectionCard,
   PortfolioSection,
   ContactSection,
-  Canvas,
+  ContactSectionTemporary,
 } from "./Components/SectionCard";
 
 import "./App.css";
 
-import HIBE from "./Components/Images/HIBE.png";
 import PSU_icon from "./Components/Images/PSU.jpg";
 import PCC_icon from "./Components/Images/PCC.png";
 import mail_icon from "./Components/Images/mail-icon.png";
@@ -21,6 +20,8 @@ import bootstrap_icon from "./Components/Images/bootstrap_icon.png";
 import node_icon from "./Components/Images/node_icon.png";
 import react_icon from "./Components/Images/react_icon.png";
 import servb_image from "./Components/Images/Serv_b.png";
+import HIBE_image from "./Components/Images/HIBE.png";
+
 import banner from "./Components/Images/banner.png";
 
 const portfolio = [
@@ -48,7 +49,7 @@ const portfolio = [
     },
   ],
   [
-    { img: servb_image, title: "Have I Been Exploited" }, //Image is always zeroth item in every project object.
+    { img: HIBE_image, title: "Have I Been Exploited" }, //Image is always zeroth item in every project object.
 
     {
       h3: "Project Aim",
@@ -107,11 +108,7 @@ function App() {
   return (
     <div className="App container-fluid mx-0 px-0 w-100">
       <SiteBanner bannerImg={banner} />
-
-      <div>
-        {" "}
-        <Nav />
-      </div>
+      <Nav />
 
       <SectionHeader bgColor={"#ad8f8f"} title={"Education"} />
       <SectionCard cover_bg="#8786cf" imgSrc={PCC_icon} text={PCC_TEXT} />
@@ -122,21 +119,6 @@ function App() {
         text={PSU_TEXT}
       />
 
-      {/*
-      <EdCard
-        title="PCC"
-        imgSrc={PCC_icon}
-        imgSrc_info={codeImage}
-        text={PCC_TEXT}
-        direction="right"
-      />
-      <EdCard
-        title="PSU"
-        imgSrc={PSU_logo}
-        imSrc_info={math}
-        text={PSU_TEXT}
-        direction="left"
-      />*/}
       <SectionHeader title={"Stack"} />
       <MultiSectionCard
         imgSrc={PCC_icon}
@@ -150,7 +132,7 @@ function App() {
       <SectionHeader title={"Portfolio"} />
       <PortfolioSection features={portfolio} />
       <SectionHeader title="Contact" />
-      <ContactSection mail_icon={mail_icon} />
+      <ContactSectionTemporary mail_icon={mail_icon} />
     </div>
   );
 }

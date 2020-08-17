@@ -1,10 +1,19 @@
-let express = require("express");
+const express = require("express");
+const path = require("path");
+
 let server = express();
+const fs = require("fs");
+const https = require("https");
 let collectionRef = null;
 let { MongoClient } = require("mongodb");
 const uri =
   "mongodb+srv://BerinHadziabdic:aFlK0cKoPRP2RYgG@cluster0-dzpnn.mongodb.net/<devsite>?retryWrites=true&w=majority";
-let path = require("path");
+
+const keyCert = {
+  key: fs.readFileSync("./server.key"),
+  cert: fs.readFileSync("./server.cert"),
+  passphrase: "1xcD5jkQ",
+};
 
 const port = process.env.port || 8080;
 
@@ -63,4 +72,5 @@ server.use(express.static(path.join(__dirname, "build")));
 server.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-server.listen(port, console.log("Listening"));
+
+server.listen(port, console.log("listening"));
