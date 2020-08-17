@@ -9,7 +9,7 @@ function SiteBanner(props) {
       </div>
       <div className=" col-8 col-md-12"></div>
       <div className="col-12  w-100 flex-grow">
-        <img className="col-12" style={{}} src={bannerImg} />
+        <img alt="" className="col-12" style={{}} src={bannerImg} />
       </div>
     </div>
   );
