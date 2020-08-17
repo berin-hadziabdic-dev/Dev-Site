@@ -144,7 +144,7 @@ function MultiSectionCard(props) {
   return (
     <div className="container-fluid">
       <div
-        className="row cover-row  section-container align-items-center justify-content-center border-bottom"
+        className="row align-items-center justify-content-center border-bottom"
         style={{ backgroundColor: "#c41700" }}
       >
         <div className="col-12 col-md-6 col-lg-3  py-2  ">
@@ -170,7 +170,9 @@ function MultiSectionCard(props) {
             {sectionObject["react"].span}
           </span>
         </div>
-        <div className="col-12 col-md-6 col-lg-3  py-2  h-100 row">
+        <div className="col-12 col-md-6 col-lg-3  py-2  h-100 ">
+          <img alt="" className="img-fluid text-center" src={mongo_icon}></img>
+          <br></br>
           <h2 className="text-secondary col-12 text-dark">
             {sectionObject["mongo"].h2}
           </h2>{" "}
@@ -180,7 +182,6 @@ function MultiSectionCard(props) {
           >
             {sectionObject["mongo"].span}
           </span>
-          <img alt="" className="img-fluid text-center" src={mongo_icon}></img>
         </div>
         <div className="col-12 col-md-6 col-lg-3   h-100 py-2">
           <h2 className="text-secondary col-12 text-dark">
