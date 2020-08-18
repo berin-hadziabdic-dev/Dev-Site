@@ -72,8 +72,8 @@ const portfolio = [
 const about_TEXT = [
   "Nice to meet you.",
   "I'm Berin, a native of Bosnia, but I've lived in the United States for most of my life.",
-  "I'm very fond of reading books when I am able to. Stephen King is my author of choice. He is a master of building suspense. Pet Semetary is by far my favorite novel of his.",
-  "I also like to play the guitar, and have been itching to actually learn how to play the piano, though I can never seem to find the time. It goes without saying I spend a lot of my time coding. Of all fields, web development enjoy the most I do.",
+  "I'm very fond of reading books when I am able to. Stephen King is my author of choice. ",
+  "I also like to play the guitar, and have been itching to actually learn how to play the piano, though I can never seem to find the time. ",
 ];
 const PCC_TEXT = [
   "Portland Community College",
