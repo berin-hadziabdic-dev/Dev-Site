@@ -108,23 +108,24 @@ function SectionCard(props) {
   return (
     <div className="container-fluid text-resize">
       <div
-        className="row cover-row section-container py-5"
+        className="row  justify-content-center py-5"
         style={{ backgroundColor: cover_bg }}
       >
-        <div className="my-4 col-12 col-md-4 border-right">
+        <div className="my-4 col-12 col-md-2 border-right">
           {" "}
           <img
             alt=""
             className="border border-secondary shadow img-fluid"
             src={imgSrc}
-          ></img>{" "}
+          ></img>
+          <br></br>
         </div>
-        <div className=" col-12 col-md-8   h-100 section-card-text">
-          <h3>
+        <div className=" col-8 col-md-6  h-100 section-card-text">
+          <h5>
             {" "}
             <span className="pr-5 text-dark">{text[0]}</span> <br></br>
-            <span className="text-warning">{text[1]}</span>
-          </h3>
+            <span className="text-secondary">{text[1]}</span>
+          </h5>
           <p className="pr-1 section-card-blurb">{text[2]}</p>
           <p className="section-card-blurb-two">{text[3]}</p>
         </div>
@@ -145,13 +146,16 @@ function MultiSectionCard(props) {
     <div className="container-fluid">
       <div
         className="row align-items-center justify-content-center border-bottom"
-        style={{ backgroundColor: "#c41700" }}
+        style={{ backgroundColor: "#26262b" }}
       >
         <div className="col-12 col-md-6 col-lg-3  py-2  ">
           <img alt="" className="img-fluid text-center" src={node_icon}></img>
           <div className="text-dark col-12">
             <h2 className="text-secondary">Node</h2>{" "}
-            <span className="tiny-text">
+            <span
+              className="tiny-text text-white"
+              style={{ fontStyle: "oblique" }}
+            >
               I enjoy using node for backend development. It's simple, very easy
               to develop in, and performant enough for most oridinary use cases.
             </span>
@@ -164,8 +168,8 @@ function MultiSectionCard(props) {
             {sectionObject["react"].h2}
           </h2>{" "}
           <span
-            className={"text-warning col-12 tiny-text"}
-            style={{ fontStyle: "bold" }}
+            className={"text-white col-12 tiny-text"}
+            style={{ fontStyle: "oblique" }}
           >
             {sectionObject["react"].span}
           </span>
@@ -173,7 +177,7 @@ function MultiSectionCard(props) {
         <div className="col-12 col-md-6 col-lg-3  py-2  h-100 ">
           <img alt="" className="img-fluid text-center" src={mongo_icon}></img>
           <br></br>
-          <h2 className="text-secondary col-12 text-dark">
+          <h2 className="text-secondary col-12">
             {sectionObject["mongo"].h2}
           </h2>{" "}
           <span
@@ -184,11 +188,11 @@ function MultiSectionCard(props) {
           </span>
         </div>
         <div className="col-12 col-md-6 col-lg-3   h-100 py-2">
-          <h2 className="text-secondary col-12 text-dark">
-            {sectionObject["bootstrap"].h2}
-          </h2>{" "}
           <img alt="" className="img-fluid " src={bootstrap_icon}></img>{" "}
           <br></br>
+          <h2 className="text-secondary col-12">
+            {sectionObject["bootstrap"].h2}
+          </h2>{" "}
           <span
             className={"text-white tiny-text"}
             style={{ fontStyle: "oblique" }}
@@ -241,7 +245,7 @@ function PortfolioSection(props) {
         {portfolioProjects.map((project) => {
           return (
             <React.Fragment>
-              <h2 className="display-4 col-12 text-dark row">
+              <h2 className="display-4 offset-1 col-11 text-dark row">
                 {project[0].title}
               </h2>
               <div className="col-12 col-lg-6">
@@ -254,7 +258,6 @@ function PortfolioSection(props) {
                           {" "}
                           {project_section.h3}
                         </h3>
-                        ;
                         <p
                           className="col-12 text-dark"
                           style={{ fontStyle: "oblique" }}
