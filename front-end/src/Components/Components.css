@@ -36,25 +36,6 @@
   }
 }
 
-.cover:hover {
-  animation-name: fadeOut;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-}
-
-.vertical-font {
-  word-break: break-word;
-  font-size: 2.5em;
-  font-weight: bolder;
-  width: 1px;
-}
-
-.section-card-text {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #e4e3fc;
-}
-
 .section-card-blurb {
   color: #36322a;
   text-shadow: 1px;
@@ -143,6 +124,7 @@
   }
 
   .tiny-text {
+    color: red;
     font-size: 0.5em;
   }
 }

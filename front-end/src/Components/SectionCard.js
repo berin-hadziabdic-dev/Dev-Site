@@ -120,14 +120,11 @@ function SectionCard(props) {
           ></img>
           <br></br>
         </div>
-        <div className=" col-8 col-md-6  h-100 section-card-text">
-          <h5>
-            {" "}
-            <span className="pr-5 text-dark">{text[0]}</span> <br></br>
-            <span className="text-secondary">{text[1]}</span>
-          </h5>
-          <p className="pr-1 section-card-blurb">{text[2]}</p>
-          <p className="section-card-blurb-two">{text[3]}</p>
+        <div className=" col-12 col-md-6 tiny-text">
+          <p className="pr-5 text-dark">{text[0]}</p>
+          <p className="text-secondary">{text[1]}</p>
+          <p className="pr-1 section-card-blurb tiny-text">{text[2]}</p>
+          <p className="section-card-blurb-two tiny-text">{text[3]}</p>
         </div>
       </div>
     </div>
