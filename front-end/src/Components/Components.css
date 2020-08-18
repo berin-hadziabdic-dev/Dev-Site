@@ -110,21 +110,30 @@
   border-bottom: 1px-solid gray;
 }
 
-.text-resize {
-  font-size: 1em;
+html {
+  font-size: 28px;
 }
 
-.tiny-text {
-  font-size: 1.2em;
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1em;
+  }
 }
 
 @include media-breakpoint-up(md) {
-  .text-resize {
-    font-size: 0.9 em;
+  html {
+    font-size: 1.2em;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6em;
   }
 
-  .tiny-text {
-    color: red;
-    font-size: 0.5em;
+  @include media-breakpoint-up(xl) {
+    html {
+      font-size: 1.6em;
+    }
   }
 }

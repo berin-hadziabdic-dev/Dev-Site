@@ -106,7 +106,7 @@ function SectionHeader(props) {
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div className="container-fluid text-resize">
+    <div className="">
       <div
         className="row  justify-content-center py-5"
         style={{ backgroundColor: cover_bg }}
@@ -120,11 +120,11 @@ function SectionCard(props) {
           ></img>
           <br></br>
         </div>
-        <div className=" col-12 col-md-6 tiny-text">
-          <p className="pr-5 text-dark">{text[0]}</p>
-          <p className="text-secondary">{text[1]}</p>
-          <p className="pr-1 section-card-blurb tiny-text">{text[2]}</p>
-          <p className="section-card-blurb-two tiny-text">{text[3]}</p>
+        <div className=" col-12 col-md-6 ">
+          <h4 className="pr-5 text-dark">{text[0]}</h4>
+          <h5 className="text-secondary">{text[1]}</h5>
+          <h5 className="pr-1 section-card-blurb ">{text[2]}</h5>
+          <h5 className="section-card-blurb-two ">{text[3]}</h5>
         </div>
       </div>
     </div>
