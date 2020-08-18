@@ -262,7 +262,6 @@ function PortfolioSection(props) {
                           {" "}
                           {project_section.p}
                         </p>
-                        ;
                       </React.Fragment>
                     );
                   }
