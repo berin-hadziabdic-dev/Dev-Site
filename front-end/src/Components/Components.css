@@ -119,13 +119,16 @@ html {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 1em;
+    font-size: 0.6em;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 1.2em;
+    font-size: 0.8em;
+  }
+  .nav-custom {
+    height: 8vh;
   }
 }
 

@@ -139,16 +139,13 @@ function MultiSectionCard(props) {
   } = props;
   return (
     <div className="container-fluid">
-      <div
-        className="row align-items-center justify-content-center border-bottom"
-        style={{ backgroundColor: "#26262b" }}
-      >
+      <div className="row align-items-center justify-content-center border-bottom">
         <div className="col-12 col-md-6 col-lg-3  py-2  ">
           <img alt="" className="img-fluid text-center" src={node_icon}></img>
           <div className="text-dark col-12">
             <h2 className="text-secondary">Node</h2>{" "}
             <span
-              className="tiny-text text-white"
+              className="tiny-text text-dark"
               style={{ fontStyle: "oblique" }}
             >
               I enjoy using node for backend development. It's simple, very easy
@@ -162,10 +159,7 @@ function MultiSectionCard(props) {
           <h2 className="text-secondary col-12">
             {sectionObject["react"].h2}
           </h2>{" "}
-          <span
-            className={"text-white col-12 tiny-text"}
-            style={{ fontStyle: "oblique" }}
-          >
+          <span className={"col-12 tiny-text"} style={{ fontStyle: "oblique" }}>
             {sectionObject["react"].span}
           </span>
         </div>
@@ -176,7 +170,7 @@ function MultiSectionCard(props) {
             {sectionObject["mongo"].h2}
           </h2>{" "}
           <span
-            className={"text-white tiny-text"}
+            className={"text-dark tiny-text"}
             style={{ fontStyle: "oblique" }}
           >
             {sectionObject["mongo"].span}
@@ -188,10 +182,7 @@ function MultiSectionCard(props) {
           <h2 className="text-secondary col-12">
             {sectionObject["bootstrap"].h2}
           </h2>{" "}
-          <span
-            className={"text-white tiny-text"}
-            style={{ fontStyle: "oblique" }}
-          >
+          <span className={"text-dark "} style={{ fontStyle: "oblique" }}>
             {sectionObject["bootstrap"].span}
           </span>
         </div>
@@ -230,15 +221,10 @@ function MultiSectionCard(props) {
 }
 
 function PortfolioSection(props) {
-  let { background, title, features: portfolioProjects } = props;
+  let { features: portfolioProjects } = props;
   return (
     <div className="container-fluid">
-      <div
-        className="row border-top pl-6"
-        style={{
-          background: background,
-        }}
-      >
+      <div className="row border-top pl-6">
         {portfolioProjects.map((project) => {
           return (
             <React.Fragment>
@@ -251,10 +237,10 @@ function PortfolioSection(props) {
                   if (project_section.img === undefined) {
                     retval = (
                       <React.Fragment>
-                        <h3 className="col-12 text-danger">
+                        <h5 className="col-12 text-danger">
                           {" "}
                           {project_section.h3}
-                        </h3>
+                        </h5>
                         <p
                           className="col-12 text-dark"
                           style={{ fontStyle: "oblique" }}
