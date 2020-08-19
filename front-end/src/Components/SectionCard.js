@@ -95,8 +95,11 @@ function SectionHeader(props) {
     >
       <div className="row">
         <div className="col-3 offset-1">
-          <span className="text-danger"> {firstLetter}</span>
-          <span className="">{remainingLetters}</span>
+          <span className="text-danger section-header-header">
+            {" "}
+            {firstLetter}
+          </span>
+          <span className="section-header-header">{remainingLetters}</span>
         </div>
       </div>
     </div>
@@ -239,7 +242,7 @@ function PortfolioSection(props) {
         {portfolioProjects.map((project) => {
           return (
             <React.Fragment>
-              <h2 className="display-4 offset-1 col-11 text-dark row">
+              <h2 className="portfolio-header offset-1 col-11 text-dark row">
                 {project[0].title}
               </h2>
               <div className="col-12 col-lg-6">
