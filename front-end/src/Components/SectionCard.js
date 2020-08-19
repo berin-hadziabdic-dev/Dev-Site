@@ -281,20 +281,18 @@ function PortfolioSection(props) {
 function ContactSectionTemporary(props) {
   let { mail_icon } = props;
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-12">
-          <h2>
-            {" "}
-            <span className="text-warning">
-              E-mail
-            </span> hadziabdicberin@gmail{" "}
-          </h2>
-          <h2>
-            LinkedIn:<a href="">Placeholder link doesnt go anywhere.</a>
-          </h2>
-          <img alt="" src={mail_icon} className="img-fluid" />
-        </div>
+    <div className="row">
+      <div className="col-12">
+        <h2>
+          {" "}
+          <span className="text-warning">
+            E-mail
+          </span> hadziabdicberin@gmail{" "}
+        </h2>
+        <h2>
+          LinkedIn:<a href="">Placeholder link doesnt go anywhere.</a>
+        </h2>
+        <img alt="" src={mail_icon} className="img-fluid" />
       </div>
     </div>
   );
