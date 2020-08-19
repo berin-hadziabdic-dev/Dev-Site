@@ -95,8 +95,8 @@ function SectionHeader(props) {
     >
       <div className="row">
         <div className="col-3 offset-1">
-          <span className="display-3 text-danger"> {firstLetter}</span>
-          <span className="text-black display-4">{remainingLetters}</span>
+          <span className="text-danger"> {firstLetter}</span>
+          <span className="">{remainingLetters}</span>
         </div>
       </div>
     </div>
