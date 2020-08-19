@@ -112,20 +112,25 @@ function App() {
       <div className="row">
         <SiteBanner bannerImg={banner} />
         <Nav />
-        <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
-        <SectionCard
-          className="row"
-          cover_bg="white"
-          imgSrc={me_icon}
-          text={about_TEXT}
-        />
-        <SectionCard cover_bg="white" imgSrc={PCC_icon} text={PCC_TEXT} />
-        <SectionCard
-          className="row"
-          cover_bg="white"
-          imgSrc={PSU_icon}
-          text={PSU_TEXT}
-        />
+        <div className="container-fluid">
+          <div className="row">
+            {" "}
+            <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
+            <SectionCard
+              className="row"
+              cover_bg="white"
+              imgSrc={me_icon}
+              text={about_TEXT}
+            />
+            <SectionCard cover_bg="white" imgSrc={PCC_icon} text={PCC_TEXT} />
+            <SectionCard
+              className="row"
+              cover_bg="white"
+              imgSrc={PSU_icon}
+              text={PSU_TEXT}
+            />
+          </div>
+        </div>
 
         <SectionHeader title={"Stack"} id="stack" />
         {

@@ -106,26 +106,21 @@ function SectionHeader(props) {
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div className="">
-      <div
-        className="row  justify-content-center py-5"
-        style={{ backgroundColor: cover_bg }}
-      >
-        <div className="my-4 col-12 col-md-2 border-right">
-          {" "}
-          <img
-            alt=""
-            className="border border-secondary shadow img-fluid"
-            src={imgSrc}
-          ></img>
-          <br></br>
-        </div>
-        <div className=" col-12 col-md-6 ">
-          <h4 className="pr-5 text-dark">{text[0]}</h4>
-          <h5 className="text-secondary">{text[1]}</h5>
-          <h5 className="pr-1 section-card-blurb ">{text[2]}</h5>
-          <h5 className="section-card-blurb-two ">{text[3]}</h5>
-        </div>
+    <div className="col-12 col-md-4 row justify-content-center">
+      <div className="my-4 col-12 ">
+        {" "}
+        <img
+          alt=""
+          className="border border-secondary shadow img-fluid"
+          src={imgSrc}
+        ></img>
+        <br></br>
+      </div>
+      <div className=" col-12 ">
+        <h4 className="pr-5 text-dark">{text[0]}</h4>
+        <h5 className="text-secondary">{text[1]}</h5>
+        <h5 className="pr-1 section-card-blurb ">{text[2]}</h5>
+        <h5 className="section-card-blurb-two ">{text[3]}</h5>
       </div>
     </div>
   );
@@ -220,7 +215,9 @@ function MultiSectionCard(props) {
               Vue's approach of templates + Javascript <br></br>over React's
               Javascript + JSX. <br></br> Though there's hacky ways around it,
               mixing JSX <br></br>
-              and Javascript can sometimes result in clutter. <br></br>
+              and Javascript can sometimes result in clutter. As I use it with
+              greater frequency, it'll probably become my go to front end state
+              managment library. <br></br>
             </p>
           </div>
         </div>
