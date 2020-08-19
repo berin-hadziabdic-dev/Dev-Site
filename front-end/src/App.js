@@ -147,7 +147,6 @@ function App() {
         <SectionHeader title={"Portfolio"} id="portfolio" />
         <PortfolioSection features={portfolio} />
         <SectionHeader title="Contact" id="contact" />
-        <ContactSectionTemporary mail_icon={mail_icon} />
       </div>
     </div>
   );
