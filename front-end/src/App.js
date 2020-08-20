@@ -114,7 +114,7 @@ function App() {
         <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
 
         <div className="container-fluid">
-          <div className="row mx-5">
+          <div className="row ">
             {" "}
             <SectionCard
               className="row"

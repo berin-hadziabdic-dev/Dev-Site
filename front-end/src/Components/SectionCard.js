@@ -32,7 +32,7 @@ function SectionHeader(props) {
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div className="col-12 col-md-6 col-lg-4 row justify-content-center">
+    <div className="col-12 col-md-6 col-lg-4">
       <div className="my-4 col-12 ">
         {" "}
         <img
@@ -41,11 +41,14 @@ function SectionCard(props) {
           src={imgSrc}
         ></img>
       </div>
-      <div className=" col-12 ">
-        <h4 className="text-dark">{text[0]}</h4>
-        <h5 className="text-secondary">{text[1]}</h5>
-        <h5 className="pr-1 section-card-blurb ">{text[2]}</h5>
-        <h5 className="section-card-blurb-two ">{text[3]}</h5>
+      <div className=" col-12">
+        <span className="text-dark col-12">{text[0]}</span>
+        <br></br>
+        <span className="text-secondary">{text[1]}</span>
+        <br></br>
+        <span className="section-card-blurb ">{text[2]}</span>
+        <br></br>
+        <span className="section-card-blurb-two col-12 ">{text[3]}</span>
       </div>
     </div>
   );
@@ -101,10 +104,10 @@ function MultiSectionCard(props) {
           </span>
         </div>
       </div>
-      <div className="row container-fluid py-4">
-        <div className="col-12 row justify-content-start">
+      <div className="row py-4">
+        <div className="col-12 row justify-content-center">
           <h2 className="col-12">Honorable Mentions</h2>
-          <div className="col-12 col-md-4 offset-md-2">
+          <div className="col-12 col-md-4">
             {" "}
             <h2>Go</h2> Go is a charming little language. I used it to write a
             small back end. I also hope to use it in the future, and by the
