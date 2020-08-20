@@ -112,17 +112,23 @@ function MultiSectionCard(props) {
             everything about it. The documentation (amazing), the performance,
             the static type checking, and its' simplicity. The delve debugger is
             also an amazingly effective tool. There's nothing to dislike about
-            it.
+            Go.
           </div>
           <div className="col-12 col-md-4">
             <h2 className="text-success">Vue </h2>
             <p>
               {" "}
               I've used React much more than Vue, but I strongly prefer Vue's
-              approach of templates + Javascript over React's Javascript + JSX.
-              Though there's hacky ways around it, mixing JSX and Javascript can
-              sometimes result in clutter. As I use it with greater frequency,
-              it'll probably become my go to front end state managment library.
+              approach of templates + Javascript over React's raw Javascript +
+              JSX imitiation html. What I like most about it that there's a
+              clear separation of JS and html in Vue code. Directives also seem
+              incredibly effective in code. A conditional render in vue is a
+              simple v-if="..." where as in React, it is a ternary expression
+              which is much more bothersome. I think as I use this wonderful
+              little library with greater frequency, I'll be able to come to
+              sound judgement where it stands against React. So, far it's
+              prospects are good, and I may very well use Vue as my primary
+              state managment library in the future.
             </p>
           </div>
         </div>

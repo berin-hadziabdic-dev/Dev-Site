@@ -15,7 +15,6 @@ import "./App.css";
 import me_icon from "./Components/Images/aboutme.jpg";
 import PSU_icon from "./Components/Images/PSU.jpg";
 import PCC_icon from "./Components/Images/PCC.png";
-import mail_icon from "./Components/Images/mail-icon.png";
 import mongo_icon from "./Components/Images/mongodb_icon.png";
 import bootstrap_icon from "./Components/Images/bootstrap_icon.png";
 import node_icon from "./Components/Images/node_icon.png";
@@ -32,7 +31,7 @@ const portfolio = [
     {
       h3: "Project Aim",
       p:
-        "Send heavy, light, or moderate traffic to a set of routes on a backend server; also allows for user, you or me, to generate data that might represent actual application users. Compiles request and response reports at the end of the process and saves results to a Mongo back end for view at a later time.",
+        "Send heavy, light, or moderate traffic to a set of routes on a backend server; also allows for the user, that's you or me, to generate data that might represent actual application users. Compiles request and response reports by pulling headers, body, and response status from the node.js req/res pairs.  Before-exit, the forked process validates the reports  and saves results to a Mongo back end for view at a later time.",
     },
     {
       h3: "Testsets",
@@ -72,20 +71,20 @@ const portfolio = [
 const about_TEXT = [
   "Nice to meet you.",
   "I'm Berin.",
-  "I'm very fond of reading books when I am able to. Stephen King is my author of choice. ",
-  "I also like to play the guitar, and have been itching to actually learn how to play the piano, though I can never seem to find the time. ",
+  "I'm very fond of reading books when I have the time, and taking my dog King out for walks. Stephen King is also my author of choice. ",
+  "Fitness and the geetar are both pastimes of mine. They bring much positivity to my life. I also have been itching to learn how to play the piano, though I can never seem to find the time. ",
 ];
 const PCC_TEXT = [
   "Portland Community College",
   "Associates Of Applied Science",
-  "P.C.C was a challenging but rewarding experience.",
-  "More or less, it was a two year trudge of math and coding.",
+  "P.C.C was a great experience. I've got nothing bad to say.",
+  "It was a two year trudge of math and coding.",
 ];
 const PSU_TEXT = [
   "Portland State University",
   "Bachelor's Of Computer Science",
   "P.S.U was a few notches of difficulty above PCC. ",
-  "The curriculum built a very strong foundation in general algorithmic knowledge,networking, databases, programming languages, and operating systems.",
+  "The curriculum built a very strong foundation in general algorithmic knowledge,networking, databases, programming languages, and operating systems. I tried to tailor my elective workload towards web development because I knew that's what I wanted to do, in spite of all the \"You're getting a four year degree only to become a web developer ridicule.\"",
 ];
 
 const sectionObject = {
@@ -97,7 +96,7 @@ const sectionObject = {
   mongo: {
     h2: "Mongo",
     span:
-      "I have really taken a liking to Mongo after using SQL databases. The beggining wasn't fun, especially the node.js driver callbacks, but after getting past the learning curver writing queries is incredibly easy and fast. The documentation is very thorough too, and that's always a good thing. ",
+      "I have really taken a liking to Mongo after using SQL databases. The beggining wasn't fun, especially the node.js driver callbacks, but after getting past the initial learning curver, writing queries is incredibly easy and fast. The documentation is very thorough too, and the payoff is huge. It's worth to keep an open mind. ",
   },
   bootstrap: {
     h2: "bootstrap",
