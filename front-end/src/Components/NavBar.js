@@ -3,7 +3,7 @@ import "./Components.css";
 
 function Nav() {
   return (
-    <nav className="navbar  navbar-light nav-custom bg-white border-bottom navbar-expand-md fade-in fixed-top">
+    <nav className="navbar  navbar-light bg-white border-bottom navbar-expand-md fade-in fixed-top">
       <button
         className="navbar-toggler"
         data-toggle="collapse"

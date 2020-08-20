@@ -1,3 +1,28 @@
+html,
+body {
+  font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  html,
+  body {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
 .row {
   margin-right: 0;
   margin-left: 0;
@@ -111,35 +136,4 @@
 .nav-link {
   background-color: white;
   border-bottom: 1px-solid gray;
-}
-
-html {
-  font-size: 28px;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 0.6em;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 0.8em;
-  }
-  .nav-custom {
-    height: 8vh;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6em;
-  }
-
-  @include media-breakpoint-up(xl) {
-    html {
-      font-size: 1.6em;
-    }
-  }
 }

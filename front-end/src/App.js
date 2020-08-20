@@ -113,7 +113,7 @@ function App() {
         <SiteBanner bannerImg={banner} />
         <Nav />
         <div className="container-fluid">
-          <div className="row">
+          <div className="row mx-5">
             {" "}
             <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
             <SectionCard

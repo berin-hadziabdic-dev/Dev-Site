@@ -1,82 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-function buildLineJSON(
-  starting_x,
-  starting_y,
-  starting_w,
-  x_max,
-  w_max,
-  dx,
-  dw,
-  fillHex
-) {
-  return {
-    x_max: x_max,
-    dx: dx,
-    dw: dw,
-    starting_x: starting_x,
-    starting_y: starting_y,
-    starting_w: starting_w,
-    w_max: w_max,
-    fillHex: fillHex,
-    cur_x: starting_x,
-    cur_w: starting_w,
-  };
-}
-
-function paintLine({ starting_y, cur_x, cur_w, fillHex }, context) {
-  context.beginPath();
-  context.moveTo(cur_x, starting_y);
-  context.lineTo(cur_x + cur_w, starting_y);
-  context.strokeStyle = fillHex;
-  context.lineWidth = "2";
-  context.stroke();
-}
-
-function buildLineSet() {}
-
-function setLine({
-  starting_x,
-  x_max,
-  w_max,
-  width_max,
-  cur_x,
-  cur_w,
-  dx,
-  dw,
-}) {}
-
-let redLine = buildLineJSON(15, 25, 50, 1000, 200, 3, 3, "#ff0000");
-let blackLine = buildLineJSON(200, 50, 100, 1000, 200, 3, 3, "black");
-let blueLine = buildLineJSON(120, 40, 50, 120, 130, 2, 3, "#071833");
-let redLine_2 = buildLineJSON(15, 65, 50, 400, 700, 3, 3, "#ff0000");
-
-function Canvas(props) {
-  let canvasRef = useRef(null);
-  let [context, setContext] = useState(null);
-
-  function drawLine(line) {
-    context.clearRect(0, 0, 1000, 1000);
-    debugger;
-    paintLine(redLine, context);
-    paintLine(blackLine, context);
-    paintLine(blueLine, context);
-    paintLine(redLine_2, context);
-  }
-
-  useEffect(() => {
-    if (canvasRef !== null) {
-      setContext(canvasRef.current.getContext("2d"));
-    }
-  }, [canvasRef]);
-
-  useEffect(() => {
-    if (context !== null) {
-      drawLine();
-    }
-  }, [context]);
-  return <canvas ref={canvasRef}></canvas>;
-}
 
 function SectionHeader(props) {
   let { title, id } = props;
@@ -117,10 +40,9 @@ function SectionCard(props) {
           className="border border-secondary shadow img-fluid"
           src={imgSrc}
         ></img>
-        <br></br>
       </div>
       <div className=" col-12 ">
-        <h4 className="pr-5 text-dark">{text[0]}</h4>
+        <h4 className="text-dark">{text[0]}</h4>
         <h5 className="text-secondary">{text[1]}</h5>
         <h5 className="pr-1 section-card-blurb ">{text[2]}</h5>
         <h5 className="section-card-blurb-two ">{text[3]}</h5>
@@ -144,10 +66,7 @@ function MultiSectionCard(props) {
           <img alt="" className="img-fluid text-center" src={node_icon}></img>
           <div className="text-dark col-12">
             <h2 className="text-secondary">Node</h2>{" "}
-            <span
-              className="tiny-text text-dark"
-              style={{ fontStyle: "oblique" }}
-            >
+            <span className="text-dark" style={{ fontStyle: "oblique" }}>
               I enjoy using node for backend development. It's simple, very easy
               to develop in, and performant enough for most oridinary use cases.
             </span>
@@ -159,26 +78,21 @@ function MultiSectionCard(props) {
           <h2 className="text-secondary col-12">
             {sectionObject["react"].h2}
           </h2>{" "}
-          <span className={"col-12 tiny-text"} style={{ fontStyle: "oblique" }}>
+          <span className={"col-12 "} style={{ fontStyle: "oblique" }}>
             {sectionObject["react"].span}
           </span>
         </div>
         <div className="col-12 col-md-6 col-lg-3  py-2  h-100 ">
           <img alt="" className="img-fluid text-center" src={mongo_icon}></img>
-          <br></br>
           <h2 className="text-secondary col-12">
             {sectionObject["mongo"].h2}
           </h2>{" "}
-          <span
-            className={"text-dark tiny-text"}
-            style={{ fontStyle: "oblique" }}
-          >
+          <span className={"text-dark "} style={{ fontStyle: "oblique" }}>
             {sectionObject["mongo"].span}
           </span>
         </div>
         <div className="col-12 col-md-6 col-lg-3   h-100 py-2">
           <img alt="" className="img-fluid " src={bootstrap_icon}></img>{" "}
-          <br></br>
           <h2 className="text-secondary col-12">
             {sectionObject["bootstrap"].h2}
           </h2>{" "}
@@ -192,26 +106,23 @@ function MultiSectionCard(props) {
           <h2 className="col-12">Honorable Mentions</h2>
           <div className="col-12 col-md-4 offset-md-2">
             {" "}
-            <h2>Go</h2> Go is a charming little language.<br></br> I used it to
-            write a small back end. <br></br>I also hope to use it in the
-            future, and by the looks of its' growing usage statistics, that's a
-            possibility. <br></br> I like everything about it.<br></br> The
-            documentation (amazing), the performance, the static type checking,{" "}
-            <br></br> and its' simplicity. The delve debugger is also an
-            amazingly effective tool. <br></br>There's nothing to dislike about
+            <h2>Go</h2> Go is a charming little language. I used it to write a
+            small back end. I also hope to use it in the future, and by the
+            looks of its' growing usage statistics, that's a possibility. I like
+            everything about it. The documentation (amazing), the performance,
+            the static type checking, and its' simplicity. The delve debugger is
+            also an amazingly effective tool. There's nothing to dislike about
             it.
           </div>
           <div className="col-12 col-md-4">
             <h2 className="text-success">Vue </h2>
             <p>
               {" "}
-              I've used React much more than Vue,<br></br> but I strongly prefer
-              Vue's approach of templates + Javascript <br></br>over React's
-              Javascript + JSX. <br></br> Though there's hacky ways around it,
-              mixing JSX <br></br>
-              and Javascript can sometimes result in clutter. As I use it with
-              greater frequency, it'll probably become my go to front end state
-              managment library. <br></br>
+              I've used React much more than Vue, but I strongly prefer Vue's
+              approach of templates + Javascript over React's Javascript + JSX.
+              Though there's hacky ways around it, mixing JSX and Javascript can
+              sometimes result in clutter. As I use it with greater frequency,
+              it'll probably become my go to front end state managment library.
             </p>
           </div>
         </div>
@@ -360,7 +271,6 @@ function ContactSection(props) {
   );
 }
 export {
-  Canvas,
   SectionHeader,
   SectionCard,
   MultiSectionCard,
