@@ -32,7 +32,7 @@ function SectionHeader(props) {
 function SectionCard(props) {
   let { imgSrc, text, cover_bg } = props;
   return (
-    <div className="col-12 col-md-4 row justify-content-center">
+    <div className="col-12 col-md-6 col-lg-4 row justify-content-center">
       <div className="my-4 col-12 ">
         {" "}
         <img
@@ -135,11 +135,11 @@ function PortfolioSection(props) {
   let { features: portfolioProjects } = props;
   return (
     <div className="container-fluid">
-      <div className="row border-top pl-6">
+      <div className="row  pl-6">
         {portfolioProjects.map((project) => {
           return (
             <React.Fragment>
-              <h2 className="portfolio-header offset-1 col-11 text-dark row">
+              <h2 className="portfolio-header border-bottom px-5 col-12 text-dark row ">
                 {project[0].title}
               </h2>
               <div className="col-12 col-lg-6">

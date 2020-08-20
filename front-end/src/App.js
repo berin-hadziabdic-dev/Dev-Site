@@ -97,7 +97,7 @@ const sectionObject = {
   mongo: {
     h2: "Mongo",
     span:
-      "I have really taken a liking to Mongo after using SQL databases. After leaping over the initial hurdle, writing queries is incredibly easy and fast. The documentation is very thorough too. ",
+      "I have really taken a liking to Mongo after using SQL databases. The beggining wasn't fun, especially the node.js driver callbacks, but after getting past the learning curver writing queries is incredibly easy and fast. The documentation is very thorough too, and that's always a good thing. ",
   },
   bootstrap: {
     h2: "bootstrap",
@@ -112,10 +112,11 @@ function App() {
       <div className="row">
         <SiteBanner bannerImg={banner} />
         <Nav />
+        <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
+
         <div className="container-fluid">
           <div className="row mx-5">
             {" "}
-            <SectionHeader bgColor={"#ad8f8f"} id="about" title={"About"} />
             <SectionCard
               className="row"
               cover_bg="white"
@@ -147,6 +148,16 @@ function App() {
         <SectionHeader title={"Portfolio"} id="portfolio" />
         <PortfolioSection features={portfolio} />
         <SectionHeader title="Contact" id="contact" />
+      </div>
+      <div className="row" id="THIS IS A TEMPORARY ELEMENT">
+        <h3 className="col-12">
+          E-mail:{" "}
+          <span className="text-success">hadziabdicberin@gmail.com</span>
+        </h3>
+        <h3 className="col-12">
+          <span>LinkedIn</span>
+          <a className="text-primary">Temporary placeholder</a>
+        </h3>
       </div>
     </div>
   );
