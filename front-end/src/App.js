@@ -21,7 +21,7 @@ import node_icon from "./Components/Images/node_icon.png";
 import react_icon from "./Components/Images/react_icon.png";
 import servb_image from "./Components/Images/Serv_b.png";
 import HIBE_image from "./Components/Images/HIBE.png";
-
+import PostIt_image from "./Components/Images/PostIt.png";
 import banner from "./Components/Images/banner.png";
 
 const portfolio = [
@@ -64,6 +64,30 @@ const portfolio = [
       h3: "The Website",
       p:
         "A Go backend and a React front end allows users to enter contract addresses in a search bar and reports whether or not the contact has been exploited and if it has, a table of vulnerabilities is displayed.",
+    },
+  ],
+  [
+    { img: PostIt_image, title: "Post-It" }, //Image is always zeroth item in every project object.
+
+    {
+      h3: "Project Aim",
+      p:
+        "Allow user to send GET,PUT,POST, and DELETE requests to the back end which served the Vue app. This tool is mainly used to simulate the HTTP functionality of a front end when one is not available.",
+    },
+    {
+      h3: "Headers",
+      p:
+        "The app allows the user to add headers via simple form through key and value inputs. The inputs are put through basic validation and then stored in a javascript object.",
+    },
+    {
+      h3: "Body",
+      p:
+        "The app also allows for a JSON body payload which is defined in much the same way the headers are.",
+    },
+    {
+      h3: "Sending A Request",
+      p:
+        "Once headers and Json payload have been defined, the user specifies an api-endpoint, an HTTP method via a select dropdown, and the response is JSON stringified and pretty printed at the bottom of the document. ",
     },
   ],
 ];
@@ -154,8 +178,13 @@ function App() {
           <span className="text-success">hadziabdicberin@gmail.com</span>
         </h3>
         <h3 className="col-12">
-          <span>LinkedIn</span>
-          <a className="text-primary">Temporary placeholder</a>
+          <span>Github Link: </span>
+          <a
+            href="https://github.com/berin-hadziabdic-dev"
+            sclassName="text-primary"
+          >
+            Click Me!
+          </a>
         </h3>
       </div>
     </div>
